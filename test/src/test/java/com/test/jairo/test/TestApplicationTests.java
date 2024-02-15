@@ -1,10 +1,10 @@
-package co.wiki.wiki;
+package com.test.jairo.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WikiApplicationTests {
+class TestApplicationTests {
 
 	@Test
 	void contextLoads() {

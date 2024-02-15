@@ -1,13 +1,13 @@
-package co.wiki.wiki;
+package com.test.jairo.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WikiApplication {
+public class TestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WikiApplication.class, args);
+		SpringApplication.run(TestApplication.class, args);
 	}
 
 }

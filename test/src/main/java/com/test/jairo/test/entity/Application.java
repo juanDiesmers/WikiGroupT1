@@ -1,5 +1,11 @@
-package co.wiki.wiki.entity;
+package com.test.jairo.test.entity;
 
+import java.time.LocalDate;
+
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
+
+//import ch.qos.logback.core.status.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +20,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Where(clause = "status = 0")
+@SQLDelete(sql = "UPDATE application SET  status = 1 WHERE id=?")
 public class Application {
 
     @Id
@@ -24,6 +31,13 @@ public class Application {
     private String url;
     private String code;
     private String internalCode;
+    // private Status status;
 
+    private String apellidos;
+    private int edad;
+    private String correo;
+    private String descripcion;
+    private int semestre;
+    private LocalDate fecha;
 
 }
