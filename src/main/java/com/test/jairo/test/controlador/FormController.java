@@ -1,5 +1,7 @@
 package com.test.jairo.test.controlador;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +28,8 @@ public class FormController {
         String descripcion = formData.getDescripcion();
         int semestre = formData.getSemestre();
         int edad = formData.getEdad();
+        LocalDate fecha = formData.getFecha();
+
 
         // Crear una nueva instancia de Application con los datos del formulario
         Application application = new Application();
@@ -35,6 +39,7 @@ public class FormController {
         application.setDescripcion(descripcion);
         application.setSemestre(semestre);
         application.setEdad(edad);
+        application.setFecha(fecha);
 
         // Guardar la nueva instancia en la base de datos
         applicationRepository.save(application);
