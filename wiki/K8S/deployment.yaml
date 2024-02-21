@@ -17,7 +17,7 @@ spec:
          - name: github-secret
       containers:
          - name: grupo_1_2_thymeleaf
-           image: localhost:5000/test:latest
+           image: localhost:5000/grupo_1_2_thymeleaf:latest
            ports:
               - containerPort: 8080
 ---
