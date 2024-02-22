@@ -1,4 +1,4 @@
-package co.wiki.project.grupo_1_2.wiki.entity;
+package co.wiki.project.grupo12.wiki.entity;
 
 import java.time.LocalDate;
 
@@ -14,6 +14,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 @Entity
 @Getter
 @Setter

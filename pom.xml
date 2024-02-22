@@ -8,7 +8,7 @@
 		<version>3.1.8</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>co.wiki.project.grupo_1_2</groupId>
+	<groupId>co.wiki.project.grupo12</groupId>
 	<artifactId>wiki</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>

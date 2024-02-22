@@ -1,4 +1,4 @@
-package co.wiki.project.grupo_1_2.wiki.controller;
+package co.wiki.project.grupo12.wiki.controller;
 
 import java.time.LocalDate;
 
@@ -6,10 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
-// Imports from wiki*
-import co.wiki.project.grupo_1_2.wiki.ApplicationRepository.ApplicationRepository;
-import co.wiki.project.grupo_1_2.wiki.entity.Application;
-
+import co.wiki.project.grupo12.wiki.ApplicationRepository.ApplicationRepository;
+import co.wiki.project.grupo12.wiki.entity.Application;
 
 @Controller
 public class FormController {
@@ -48,5 +46,5 @@ public class FormController {
 
         // Redirigir a otra página
         return "Resultado";
-    }  
+    }
 }

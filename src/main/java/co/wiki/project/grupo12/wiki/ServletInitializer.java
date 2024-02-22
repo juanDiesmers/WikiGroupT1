@@ -1,4 +1,4 @@
-package co.wiki.project.grupo_1_2.wiki;
+package co.wiki.project.grupo12.wiki;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
