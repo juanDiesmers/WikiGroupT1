@@ -1,4 +1,4 @@
-package co.wiki.project.grupo12.wiki.controller;
+package co.wiki.project.grupo_1_2.wiki.controller;
 
 import java.time.LocalDate;
 

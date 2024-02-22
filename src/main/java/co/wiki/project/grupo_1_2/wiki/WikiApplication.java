@@ -1,4 +1,4 @@
-package co.wiki.project.grupo12.wiki;
+package co.wiki.project.grupo_1_2.wiki;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
