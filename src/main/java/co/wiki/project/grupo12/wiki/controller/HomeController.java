@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/plantilla")
+@RequestMapping("/grupo12/plantilla")
 public class HomeController {
 
     @GetMapping("/Home")
