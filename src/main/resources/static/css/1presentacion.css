@@ -1,0 +1,78 @@
+/* Restablecer estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+  
+  header p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  
+  /* Main */
+  main {
+    padding: 20px;
+  }
+  
+  /* Group */
+  .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* Person */
+  .person {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  /* Contenido Principal */
+  .contenido-principal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contenido-principal h2 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #4CAF50;
+  }
+  
+  .contenido-principal p {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
