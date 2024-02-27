@@ -14,6 +14,11 @@ public class HomeController {
         return "Home";
     }
 
+    @GetMapping("/1presentacion")
+    public String losPipolSoloTexto1() {
+        return "1presentacion";
+    }
+
     @GetMapping("/2Encuesta")
     public ModelAndView losPipolTemplateModelAndView() {
         return new ModelAndView("2Encuesta");
