@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" href="/grupo12/css/2Encuesta.css">
+    <style>
+        #error1,#error2,#error3,#error4{
+           color: red
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,10 +26,10 @@
             <label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" name="apellidos" maxlength="50" required>
             <br>
-
+            
             <label for="edad">Edad:</label>
-            <input type="number" id="edad" name="edad" required>
-            <br>
+            <input type="number" id="edad" name="edad" onkeyup="capturarEdad()" required>
+            <span id="error4" class="error"></span><br>
 
             <label for="correo">Correo:</label>
             <input type="email" id="correo" name="email" maxlength="100" required>

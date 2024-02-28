@@ -149,6 +149,19 @@ fetch('/submit', {
 });
 }
 
+function capturarEdad(){
+	var edad = document.getElementById("edad").value;
+	var error = document.getElementById("error4");
+	console.log(edad)
+	if(edad > 100){
+		error.textContent="No se puede tener una edad mayor a 100";
+		
+	}
+	else{
+		error.textContent= ""
+	}
+}
+
 
 function alHome(){
 window.location.href = "/grupo12/plantilla/Home";
