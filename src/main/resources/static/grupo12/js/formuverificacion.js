@@ -1,64 +1,113 @@
 // formuVerificacion.js
 
-function validarFormulario() {
-    var nombres = document.getElementById("nombres");
-    var apellidos = document.getElementById("apellidos");
-    var correo = document.getElementById("correo");
-    var descripcion = document.getElementById("descripcion");
-    var semestre = document.getElementById("semestre");
-    var edad = document.getElementById("edad");
+var nombres = document.getElementById("nombres");
+var apellidos = document.getElementById("apellidos");
+var correo = document.getElementById("correo");
+var descripcion = document.getElementById("descripcion");
+var semestre = document.getElementById("semestre");
+var edad = document.getElementById("edad");
 
-    var mensajeErrorNombres = document.getElementById("errorNombres");
-    var mensajeErrorApellidos = document.getElementById("errorApellidos");
-    var mensajeErrorCorreo = document.getElementById("errorCorreo");
-    var mensajeErrorDescripcion = document.getElementById("errorDescripcion");
-    var mensajeErrorSemestre = document.getElementById("errorSemestre");
-    var mensajeErrorEdad = document.getElementById("errorEdad");
+/*var mensajeErrorNombres = document.getElementById("errorNombres");
+var mensajeErrorApellidos = document.getElementById("errorApellidos");
+var mensajeErrorCorreo = document.getElementById("errorCorreo");
+var mensajeErrorDescripcion = document.getElementById("errorDescripcion");
+var mensajeErrorSemestre = document.getElementById("errorSemestre");
+var mensajeErrorEdad = document.getElementById("errorEdad");*/
 
-    var mensajeError = "";
+const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-    if (nombres.value === "" || nombres.value.length > 100) {
+var mensajeError = document.getElementById("mensajeError");
+var mensajeChar = document.getElementById("numCaracteres");
+var enviarBoton = document.getElementById("enviar");
+
+nombres.addEventListener('input', function() {
+    mensajeChar.innerHTML = "Cantidad de caracteres: " + nombres.value.length + "<br> Cantidad de caracteres máximo: 100.<br>";
+    if (nombres.value === ""){
         nombres.style.borderColor = "red";
-        mensajeErrorNombres.innerHTML += "Nombres: Obligatorio, máximo 100 caracteres.<br>";
-    } else {
+        mensajeError.innerHTML = "Nombres: Obligatorio.<br>";
+    } else if(nombres.value.length > 100){
+        nombres.style.borderColor = "red";
+        mensajeError.innerHTML = "Máximo 100 caracteres.<br>";
+        nombres.value = nombres.value.slice(0, 100);
+        input.disabled = true;
+    }else {
+        input.disabled = false;
         nombres.style.borderColor = "";
     }
+  });
 
-    if (apellidos.value === "" || apellidos.value.length > 100) {
+nombres.addEventListener('blur', function() {
+    mensajeChar.innerHTML = "";
+});
+
+
+apellidos.addEventListener('input', function() {
+    mensajeChar.innerHTML = "Cantidad de caracteres: " + apellidos.value.length + "<br> Cantidad de caracteres máximo: 100.<br>";
+    if (apellidos.value === ""){
         apellidos.style.borderColor = "red";
-        mensajeError += "Apellidos: Obligatorio, máximo 100 caracteres.<br>";
-    } else {
+        mensajeError.innerHTML = "Apellidos: Obligatorio.<br>";
+    } else if(apellidos.value.length > 100){
+        apellidos.style.borderColor = "red";
+        mensajeError.innerHTML = "Máximo 100 caracteres.<br>";
+        apellidos.value = apellidos.value.slice(0, 100);
+        input.disabled = true;
+    }else {
+        input.disabled = false;
         apellidos.style.borderColor = "";
     }
+  });
 
-    if (correo.value === "" || correo.value.length > 100 || !correo.value.includes('@') || correo.value.split('@')[1].indexOf('.') === -1 || correo.value.includes(' ') || /[áéíóúñÁÉÍÓÚ]/.test(correo.value)) {
+apellidos.addEventListener('blur', function() {
+    mensajeChar.innerHTML = "";
+});
+
+  
+
+  correo.addEventListener('input', function() {
+    mensajeChar.innerHTML = "Cantidad de caracteres: " + correo.value.length + "<br> Cantidad de caracteres máximo: 100.<br>";
+    if (correo.value === "" || regex.test(correo.value) === false){
         correo.style.borderColor = "red";
-        mensajeError += "Correo: Obligatorio, máximo 100 caracteres, formato incorrecto.<br>";
-    } else {
+        mensajeError.innerHTML = "Correo: Obligatorio, formato incorrecto.<br>";
+    } else if(correo.value.length > 100){
+        mensajeError.innerHTML = "Máximo 100 caracteres.<br>";
+        correo.value = correo.value.slice(0, 100);
+    } else{
+        input.disabled = false;
         correo.style.borderColor = "";
     }
+  });
+correo.addEventListener('blur', function() {
+    mensajeChar.innerHTML = "";
+});
 
+  semestre.addEventListener('input', function() {
     if (semestre.value === "" || semestre.value < 0 || semestre.value > 16) {
         semestre.style.borderColor = "red";
-        mensajeError += "Semestre: Debe ser un número entre 0 y 16.<br>";
+        mensajeError.innerHTML = "Obligatorio. Semestre: Debe ser un número entre 0 y 16.<br>";
     } else {
         semestre.style.borderColor = "";
     }
+  });
 
+  descripcion.addEventListener('input', function() {
     if (descripcion.value === "") {
         descripcion.style.borderColor = "red";
-        mensajeError += "Descripción: Obligatorio.<br>";
+        mensajeError.innerHTML = "Descripción: Obligatorio.<br>";
     } else {
         descripcion.style.borderColor = "";
     }
+  });
 
+  edad.addEventListener('input', function() {
     if (edad.value === "" || isNaN(edad.value) || edad.value < 0 || edad.value >= 100) {
         edad.style.borderColor = "red";
-        mensajeError += "Edad: Debe ser un número entero entre 0 y 99.<br>";
+        mensajeError.innerHTML = "Edad: Obligatorio. Debe ser un número entero entre 0 y 99.<br>";
     } else {
         edad.style.borderColor = "";
     }
+  });
 
+  enviarBoton.addEventListener('click', function() {
     var mensajeErrorDiv = document.getElementById("mensajeError");
     mensajeErrorDiv.innerHTML = mensajeError;
 
@@ -66,35 +115,41 @@ function validarFormulario() {
     if (!mensajeError) {
         enviarDatos();
     }
-}
+  });
+
 
 function enviarDatos() {
-    var nombres = document.getElementById("nombres").value;
-    var apellidos = document.getElementById("apellidos").value;
-    var correo = document.getElementById("correo").value;
-    var descripcion = document.getElementById("descripcion").value;
-    var semestre = document.getElementById("semestre").value;
-    var edad = document.getElementById("edad").value;
+var nombres = document.getElementById("nombres").value;
+var apellidos = document.getElementById("apellidos").value;
+var correo = document.getElementById("correo").value;
+var descripcion = document.getElementById("descripcion").value;
+var semestre = document.getElementById("semestre").value;
+var edad = document.getElementById("edad").value;
 
-    fetch('/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            nombres: nombres,
-            apellidos: apellidos,
-            correo: correo,
-            descripcion: descripcion,
-            semestre: semestre,
-            edad: edad
-        }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito o redirigir a otra página
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+fetch('/submit', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        nombres: nombres,
+        apellidos: apellidos,
+        correo: correo,
+        descripcion: descripcion,
+        semestre: semestre,
+        edad: edad
+    }),
+})
+.then(response => response.json())
+.then(data => {
+    // Manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito o redirigir a otra página
+})
+.catch((error) => {
+    console.error('Error:', error);
+});
+}
+
+
+function alHome(){
+window.location.href = "/grupo12/plantilla/Home";
 }

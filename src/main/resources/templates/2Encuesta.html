@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
-    <link rel="stylesheet" href="/grupo12/css//2Encuesta.css">
+    <link rel="stylesheet" href="/grupo12/css/2Encuesta.css">
 </head>
 <body>
     <header>
@@ -42,13 +42,15 @@
             <input type="date" id="fecha" name="fecha" required>
             <br>
 
-            <button type="button" onclick="">Regresar</button>
-            <button type="submit">Enviar</button>
+            <button type="button" onclick="alHome()">Regresar</button>
+            <button type="submit" id="enviar">Enviar</button>
         </form>
 
         <div id="mensajeError" class="error"></div>
 
-        <script src="/js/formuVerificacion.js"></script>
+        <div id="numCaracteres" class="error"></div>
+
+        <script src="/grupo12/js/formuverificacion.js"></script>
 
         <div th:if="${param.success}">
             <p>¡El formulario se ha enviado correctamente!</p>
@@ -57,8 +59,6 @@
             <p>Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.</p>
         </div>
     </main>
-
-    
 
 </body>
 
