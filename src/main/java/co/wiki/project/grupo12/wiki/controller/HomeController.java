@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-@RequestMapping("/grupo12")
+@RequestMapping("/grupo12/plantilla")
 public class HomeController {
 
     @GetMapping("/Home")
@@ -35,7 +35,7 @@ public class HomeController {
     public String RequerimientosR() {
         return "Requerimientos";
     }
-    
+
     @GetMapping("/DescipcionProyecto")
     public String DescipcionProyecto() {
         return "DescipcionProyecto";

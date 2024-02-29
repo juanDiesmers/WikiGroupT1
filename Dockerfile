@@ -5,9 +5,6 @@ COPY . /app
 # Establece el directorio de trabajo
 WORKDIR /app
 
-# Otorga permisos de ejecución al archivo mvnw
-
-
 # Construye el archivo JAR de la aplicación
 RUN ./mvnw clean install -DskipTests
 
