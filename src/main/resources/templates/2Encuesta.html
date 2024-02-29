@@ -6,7 +6,7 @@
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" href="/grupo12/css/2Encuesta.css">
     <style>
-        #error1,#error2,#error3,#error4{
+        #error1,#error2,#error3,#error4,#mensaje{
            color: red
         }
     </style>
@@ -19,12 +19,12 @@
     <main>
         <form action="/submit" method="post" id="contactForm">
             <label for="nombres">Nombres:</label>
-            <input type="text" id="nombres" name="name" maxlength="50" required>
-            <span id="errorNombres" class="error"></span><br>
+            <input type="text" id="nombres" name="name" maxlength="100" onkeyup="capturarNombre()" required>
+            <span id="mensaje" class="error"></span>
             <br>
 
             <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" maxlength="50" required>
+            <input type="text" id="apellidos" name="apellidos" maxlength="100" onkeyup="capturarApellido()"required>
             <br>
             
             <label for="edad">Edad:</label>

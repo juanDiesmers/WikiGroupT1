@@ -176,13 +176,30 @@ function capturarSemestre(){
 	}
 }
 
+function capturarNombre(){
+	var palabra = document.getElementById("nombres").value;
+	var error = document.getElementById("mensaje");
+
+		error.textContent= palabra.length+"/100";
+		
+}
+
+function capturarApellido(){
+	var palabra = document.getElementById("apellidos").value;
+	var error = document.getElementById("mensaje");
+
+		error.textContent= palabra.length+"/100";
+		
+}
+
+
 function validarEmail(){
     var mail = document.getElementById("correo").value.trim();
     var error = document.getElementById("error1");
 
     // Verifica si el correo electrónico está completamente en mayúsculas
     if (mail !== mail.toUpperCase()) {
-        error.textContent = "El email debe estar completamente en mayúsculas.";
+        error.textContent = "El email debe estar completamente en mayúsculas."+mail.length+"/100";
         return;
     }
 
@@ -190,9 +207,9 @@ function validarEmail(){
     var tienePuntoDespuesArroba = false;
 
     // Verifica que no haya espacios ni caracteres especiales como tildes o ñ
-    var caracteresEspeciales = /[áéíóúüñÁÉÍÓÚÜÑ\s]/;
+    var caracteresEspeciales = /[áéíóúüñÁÉÍÓÚÜÑñ\s]/;
     if (caracteresEspeciales.test(mail)) {
-        error.textContent = "El email no debe contener espacios ni caracteres especiales.";
+        error.textContent = "El email no debe contener espacios ni caracteres especiales."+mail.length+"/100";
         return;
     }
 
@@ -211,7 +228,7 @@ function validarEmail(){
     }
 
     if (!tieneArroba || !tienePuntoDespuesArroba) {
-        error.textContent = "El email debe contener '@' y al menos un punto después de '@'.";
+        error.textContent = "El email debe contener '@' y al menos un punto después de '@'."+mail.length+"/100";
         return;
     }
 
