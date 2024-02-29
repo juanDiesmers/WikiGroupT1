@@ -105,6 +105,7 @@ fetch('/submit', {
 })
 .then(response => response.json())
 .then(data => {
+    console.log('Respuesta del servidor:', data);
     // Manejar la respuesta del servidor, por ejemplo, mostrar un mensaje de éxito o redirigir a otra página
 })
 .catch((error) => {
