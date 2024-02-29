@@ -9,5 +9,5 @@ function toggleNavigation() {
 var homeButton = document.getElementById("HOme");
 
 homeButton.addEventListener("click", function() {
-    window.location.href = "../templates/Home.html";
+    window.location.href = "Home";
 });

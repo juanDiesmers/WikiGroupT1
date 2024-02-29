@@ -36,9 +36,9 @@ public class HomeController {
         return "Requerimientos";
     }
 
-    @GetMapping("/DescipcionProyecto")
-    public String DescipcionProyecto() {
-        return "DescipcionProyecto";
+    @GetMapping("/DescripcionProyecto")
+    public String DescripcionProyecto() {
+        return "DescripcionProyecto";
     }
     
 }
