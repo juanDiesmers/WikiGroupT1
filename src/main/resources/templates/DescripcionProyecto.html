@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Descripción del Proyecto</title>
+    <link rel="stylesheet" href="../static/grupo12/css/DescripcionP.css">
+    <script src="../static/grupo12/js/DescripcionP.js" defer></script>
 </head>
 <body>
+
+    <header class="navbar">
+        <a href="home.html" class="logo">
+            <h1>WIKI Desarrollo WEB</h1>
+        </a>
+        <div class="nav-buttons">
+            <ul class="submenu" id="navigationMenu">
+                <li><a href="1presentacion.html">Presentacion</a></li>
+                <li><a href="2Encuesta.html">Encuesta</a></li>
+                <li><a href="Requerimientos.html">Requerimientos</a></li>
+                <li><a href="DescripcionProyecto.html">Descripcion Proyecto</a></li>
+            </ul>
+            <button id="homeButton" onclick="toggleNavigation()">Inicio</button>
+        </div>
+    </header>
+    <h1>Proyecto: ArriendaTuFinca</h1>
+
+    <section>
+        <h2>Usuarios Principales</h2>
+        <table>
+            <tr>
+                <th>Usuario Arrendatario</th>
+                <th>Usuario Arrendador</th>
+            </tr>
+            <tr>
+                <td>El “Usuario Arrendatario” tendrá la capacidad de realizar una variedad de acciones relacionadas con la gestión de propiedades y la interacción con otros usuarios.</td>
+                <td>El “Usuario Arrendador” tendrá un conjunto diferente de funcionalidades diseñadas para facilitar el proceso de búsqueda y arrendamiento de propiedades.</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Crear, editar, eliminar y actualizar propiedades disponibles para arrendamiento.</li>
+                        <li>Revisar y responder a todas las solicitudes de arrendamiento recibidas.</li>
+                        <li>Verificar los pagos realizados por los arrendadores.</li>
+                        <li>Proporcionar calificaciones y comentarios sobre la experiencia de arrendamiento.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Buscar fincas disponibles filtradas por ubicación geográfica.</li>
+                        <li>Solicitar el arrendamiento de una finca específica.</li>
+                        <li>Realizar el pago correspondiente del arriendo.</li>
+                        <li>Calificar tanto la finca arrendada como al arrendatario.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Implementación de la Aplicación</h2>
+        <p>La implementación requerirá un sistema de autenticación y autorización robusto, así como interfaces de usuario intuitivas y funcionales.</p>
+    </section>
+
+    <section>
+        <h2>Flujo de Trabajo</h2>
+        <p>El flujo de trabajo para el “Usuario Arrendatario” implicará la gestión activa de propiedades, revisión de solicitudes de arrendamiento y seguimiento de pagos.</p>
+        <p>El “Usuario Arrendador” estará enfocado en búsqueda y arrendamiento de propiedades, así como gestión de pagos y calificación de experiencias.</p>
+    </section>
+
+    <section>
+        <h2>Desarrollo de Plataforma</h2>
+        <p>Deberá desarrollarse un backend exponiendo servicios en REST usando SPRING, además para la conexión con la base de datos se deberá usar JPA.</p>
+    </section>
+
+    <section>
+        <h2>Repositorio y Fechas de Entrega</h2>
+        <p>Los grupos deberán manejar un repositorio de control de versiones y cumplir con las fechas de entrega establecidas.</p>
+    </section>
+
+    <section>
+        <h2>Fechas y Entregas</h2>
+        <div class="container">
+            <div class="section">
+                <h3>Entrega 1: JPA, Angular y Wikigroup</h3>
+                <p><strong>Fecha:</strong> 21 de septiembre 2023</p>
+                <ul>
+                    <li>JPA: Conexión a la base de datos.</li>
+                    <li>Modelo entidad relación, en la wiki de su grupo ud deberá subir el modelo y el diccionario de datos.</li>
+                    <li>Mapeo del modelo al proyecto JPA en Spring.</li>
+                    <li>Pruebas unitarias del código, en la wiki ud deberá subir la documentación de los casos de pruebas en los que mínimo de información es: identificador de la prueba, título, descripción, diseñada por, ejecutada por, dependencias de las pruebas, resultados esperados, resultados reales y si cumplió o no cumplió. Notas deben ser por lo menos 5 pruebas por clase y se deben documentar si cumplió o no cumplió.</li>
+                    <li>Debe realizar mínimo los servicios CRUD (Create, Retrieve, Update and Delete) de cada una de las clases que tiene; en la wiki debe tener los contratos funcionales de cada uno de los servicios y en debe traer en postman una consulta por cada servicio expuesto.</li>
+                </ul>
+            </div>
     
+            <div class="section">
+                <h3>Entrega 2: Conexión JPA – Angular</h3>
+                <p><strong>Fecha:</strong> 19 de octubre 2023</p>
+                <p>Por ahora no es necesario realizar Autenticación, los datos se harán pensando que siempre lo realiza el mismo usuario.</p>
+                <ul>
+                    <li>Componentes: Deben mostrar componentes transversales, por lo menos 2.</li>
+                    <li>Deben mostrar componentes principales de cada una de las páginas que tienen para cumplir con todas las historias de usuarios conectadas con el backend.</li>
+                    <li>Routes: Se debe mostrar el mockup y mostrar cada una de las páginas que estén en el mismo.</li>
+                    <li>Comunicación: Mostrar los modelos y servicios.</li>
+                    <li>Comunicación backend: Verificación que desde la interfaz se realicen las historias de usuario.</li>
+                </ul>
+            </div>
+    
+            <div class="section">
+                <h3>Entrega 2: Pruebas carga, frontend y seguridad – Código limpio</h3>
+                <p><strong>Fecha:</strong> 9 de noviembre 2023</p>
+                <ul>
+                    <li>Pruebas de carga.</li>
+                    <li>JWT.</li>
+                    <li>Pruebas automatizadas de interfaz gráfica.</li>
+                    <li>Filtros para manejo de errores.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Diagrama</h2>
+        <div style="text-align: center;">
+            <img src="../static/grupo12/images/LORESMIPSUM.jpg" alt="Diagrama de la aplicación" class="diagrama">
+    </div>
+    
+    </section>
 </body>
 </html>
