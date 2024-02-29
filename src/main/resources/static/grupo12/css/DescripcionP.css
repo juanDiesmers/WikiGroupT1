@@ -1,0 +1,177 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Estilos para encabezados */
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #666;
+}
+
+/* Estilos para párrafos */
+p {
+    margin-bottom: 10px;
+}
+
+/* Estilos para listas desordenadas */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para las secciones */
+section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para los títulos de sección */
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Estilo para los párrafos dentro de las secciones */
+section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilo para las tablas dentro de las secciones */
+section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para las celdas de la tabla */
+section table th, section table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Estilo para las filas pares de la tabla */
+section table tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section {
+    width: 30%; /* Ajusta el ancho según sea necesario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-top: 0;
+}
+
+.section ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 5px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #fff;
+    transition: color 0.3s; /* Transición suave del color del texto */
+}
+
+.logo h1:hover {
+    color: #8a92e0; /* Cambia el color del texto al verde al pasar el mouse */
+}
+
+
+/* Estilo para el contenedor del menú de navegación */
+#homeButton {
+    background-color: #000000; /* Color de fondo verde */
+    color: white; /* Color de texto blanco */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: auto; /* Ajusta el margen a la derecha */
+}
+
+#homeButton:hover {
+    background-color: #8a92e0; /* Cambia el color de fondo al verde oscuro al pasar el mouse */
+}
+
+/* Estilo para el contenedor del menú de navegación */
+.nav-buttons {
+    position: relative; /* Para alinear el menú correctamente */
+}
+
+/* Estilo para el menú de navegación */
+.submenu {
+    display: none; /* Oculta el menú de navegación por defecto */
+    position: absolute; /* Posición absoluta para superponer el menú sobre el botón */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espacio interno del menú */
+    z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
+    max-height: 300px; /* Altura máxima del menú para permitir desplazamiento */
+    overflow-y: auto; /* Habilitar el desplazamiento vertical si el contenido excede la altura máxima */
+    right: 10px; /* Ajusta la posición a la derecha */
+}
+
+/* Estilo para los elementos de la lista dentro del menú */
+.submenu li {
+    list-style-type: none; /* Sin viñetas */
+    margin-bottom: 5px; /* Espacio entre elementos */
+}
+
+/* Estilo para los enlaces dentro del menú */
+.submenu li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #333; /* Color de texto oscuro */
+    transition: color 0.3s; /* Transición suave del color del texto */
+}
+
+/* Estilo para cambiar el color del texto al pasar el mouse sobre los enlaces */
+.submenu li a:hover {
+    color: #4CAF50; /* Cambia el color del texto al verde al pasar el mouse */
+}

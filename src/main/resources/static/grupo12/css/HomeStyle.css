@@ -138,7 +138,7 @@ footer {
 
 /* Estilos adicionales para el botón */
 .button-wrapper {
-  width: 100%; /* El contenedor ocupará todo el ancho de la sección */
+  width: 10%; /* El contenedor ocupará todo el ancho de la sección */
   text-align: center;
 }
 
@@ -185,7 +185,7 @@ footer {
 }
 
 .button:hover .bg-line {
-  fill: #5bb35e;
+  fill: #8a92e0;
 }
 
 .button:hover .hl-line {
@@ -195,10 +195,9 @@ footer {
 /* Estilo para el menú */
 .menu {
   position: absolute;
-  top: 50%; /* Situamos el menú debajo del botón */
-  left: 85%; /* Ajuste del margen izquierdo */
-  margin-left: 10px; /* Ajuste del margen izquierdo */
-  transform: translateX(-50%);
+  top: 75%; /* Situamos el menú debajo del botón */
+  left: calc(8% + 10px); /* Posicionamos el menú a la derecha del botón */
+  transform: translateY(-50%); 
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
