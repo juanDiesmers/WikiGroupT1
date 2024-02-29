@@ -85,7 +85,6 @@ function enviarDatos() {
 var nombres = document.getElementById("nombres").value;
 var apellidos = document.getElementById("apellidos").value;
 var correo = document.getElementById("correo").value;
-System.out.println(correo);
 var descripcion = document.getElementById("descripcion").value;
 var semestre = document.getElementById("semestre").value;
 var edad = document.getElementById("edad").value;
