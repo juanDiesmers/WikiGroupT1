@@ -163,6 +163,61 @@ function capturarEdad(){
 }
 
 
+function capturarSemestre(){
+	var semestre = document.getElementById("semestre").value;
+	var error = document.getElementById("error3");
+	console.log(semestre)
+	if(semestre < 0 || semestre >16){
+		error.textContent="No se puede tener un semestre mayor a 16 ni menor que 0";
+		
+	}
+	else{
+		error.textContent= ""
+	}
+}
+
+function validarEmail(){
+    var mail = document.getElementById("correo").value.trim();
+    var error = document.getElementById("error1");
+
+    // Verifica si el correo electrónico está completamente en mayúsculas
+    if (mail !== mail.toUpperCase()) {
+        error.textContent = "El email debe estar completamente en mayúsculas.";
+        return;
+    }
+
+    var tieneArroba = false;
+    var tienePuntoDespuesArroba = false;
+
+    // Verifica que no haya espacios ni caracteres especiales como tildes o ñ
+    var caracteresEspeciales = /[áéíóúüñÁÉÍÓÚÜÑ\s]/;
+    if (caracteresEspeciales.test(mail)) {
+        error.textContent = "El email no debe contener espacios ni caracteres especiales.";
+        return;
+    }
+
+    // Verifica la presencia de '@' y al menos un punto después de '@'
+    for (var i = 0; i < mail.length; i++) {
+        if (mail[i] === '@') {
+            tieneArroba = true;
+            for (var j = i + 1; j < mail.length; j++) {
+                if (mail[j] === '.') {
+                    tienePuntoDespuesArroba = true;
+                    break;
+                }
+            }
+            break;
+        }
+    }
+
+    if (!tieneArroba || !tienePuntoDespuesArroba) {
+        error.textContent = "El email debe contener '@' y al menos un punto después de '@'.";
+        return;
+    }
+
+    error.textContent = ""; // El email es válido
+}
+
 function alHome(){
 window.location.href = "/grupo12/plantilla/Home";
 }
