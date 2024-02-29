@@ -6,7 +6,7 @@
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" href="../static/grupo12/css/2Encuesta.css">
     <style>
-        #error1,#error2,#error3,#error4,#mensaje{
+        #error1,#error2,#error3,#error4,#mensaje,#otromensaje{
            color: red
         }
     </style>
@@ -26,6 +26,7 @@
 
             <label for="apellidos">Apellidos:</label>
             <input type="text" id="apellidos" name="apellidos" maxlength="100" onkeyup="capturarApellido()"required>
+            <span id="otromensaje" class="error"></span>
             <br>
             
             <label for="edad">Edad:</label>
