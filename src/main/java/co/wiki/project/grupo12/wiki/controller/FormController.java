@@ -26,7 +26,6 @@ public class FormController {
         String nombres = formData.getName();
         String apellidos = formData.getApellidos();
         String correo = formData.getCorreo();
-        System.out.println(correo);
         String descripcion = formData.getDescripcion();
         int semestre = formData.getSemestre();
         int edad = formData.getEdad();
