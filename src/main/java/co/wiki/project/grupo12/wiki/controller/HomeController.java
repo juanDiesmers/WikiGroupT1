@@ -28,4 +28,9 @@ public class HomeController {
     public String textoResultado() {
         return "Resultado";
     }
+
+    @GetMapping("/Requerimientos")
+    public String RequerimientosR() {
+        return "Requerimientos";
+    }
 }
