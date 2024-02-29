@@ -20,21 +20,7 @@ var mensajeError = document.getElementById("mensajeError");
 var mensajeChar = document.getElementById("numCaracteres");
 var enviarBoton = document.getElementById("enviar");
 
-nombres.addEventListener('input', function() {
-    mensajeChar.innerHTML = "Cantidad de caracteres: " + nombres.value.length + "<br> Cantidad de caracteres máximo: 100.<br>";
-    if (nombres.value === ""){
-        nombres.style.borderColor = "red";
-        mensajeError.innerHTML = "Nombres: Obligatorio.<br>";
-    } else if(nombres.value.length > 100){
-        nombres.style.borderColor = "red";
-        mensajeError.innerHTML = "Máximo 100 caracteres.<br>";
-        nombres.value = nombres.value.slice(0, 100);
-        input.disabled = true;
-    }else {
-        input.disabled = false;
-        nombres.style.borderColor = "";
-    }
-  });
+
 
 nombres.addEventListener('blur', function() {
     mensajeChar.innerHTML = "";
@@ -62,32 +48,6 @@ apellidos.addEventListener('blur', function() {
 });
 
   
-
-  correo.addEventListener('input', function() {
-    mensajeChar.innerHTML = "Cantidad de caracteres: " + correo.value.length + "<br> Cantidad de caracteres máximo: 100.<br>";
-    if (correo.value === "" || regex.test(correo.value) === false){
-        correo.style.borderColor = "red";
-        mensajeError.innerHTML = "Correo: Obligatorio, formato incorrecto.<br>";
-    } else if(correo.value.length > 100){
-        mensajeError.innerHTML = "Máximo 100 caracteres.<br>";
-        correo.value = correo.value.slice(0, 100);
-    } else{
-        input.disabled = false;
-        correo.style.borderColor = "";
-    }
-  });
-correo.addEventListener('blur', function() {
-    mensajeChar.innerHTML = "";
-});
-
-  semestre.addEventListener('input', function() {
-    if (semestre.value === "" || semestre.value < 0 || semestre.value > 16) {
-        semestre.style.borderColor = "red";
-        mensajeError.innerHTML = "Obligatorio. Semestre: Debe ser un número entre 0 y 16.<br>";
-    } else {
-        semestre.style.borderColor = "";
-    }
-  });
 
   descripcion.addEventListener('input', function() {
     if (descripcion.value === "") {
@@ -186,7 +146,7 @@ function capturarNombre(){
 
 function capturarApellido(){
 	var palabra = document.getElementById("apellidos").value;
-	var error = document.getElementById("mensaje");
+	var error = document.getElementById("otromensaje");
 
 		error.textContent= palabra.length+"/100";
 		
