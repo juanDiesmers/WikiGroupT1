@@ -95,23 +95,15 @@ main {
   margin-bottom: 20px;
 }
 
-.contenido-principal ul {
-  list-style: none;
-  padding: 0;
+/* Estilo para ocultar la bienvenida */
+.bienvenida {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
 }
 
-.contenido-principal li {
-  margin-bottom: 10px;
-}
-
-.contenido-principal a {
-  text-decoration: none;
-  color: #0073b7;
-  transition: color 0.3s ease;
-}
-
-.contenido-principal a:hover {
-  color: #4CAF50;
+.bienvenida.mostrar {
+  height: auto;
 }
 
 /* Footer */
@@ -120,4 +112,101 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  margin-top: 20px; /* Ajuste del margen superior */
+}
+
+
+
+/* Contenido principal */
+.contenido-principal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Agregamos posición relativa para el menú */
+}
+
+.contenido-principal h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #4CAF50;
+}
+
+.contenido-principal p {
+  margin-bottom: 20px;
+}
+
+/* Estilos adicionales para el botón */
+.button-wrapper {
+  width: 100%; /* El contenedor ocupará todo el ancho de la sección */
+  text-align: center;
+}
+
+/* Estilo para el botón de explorar */
+.button {
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+ 
+}
+
+.button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 40px; /* Adjust line-height to match the new height of the button */
+  font-size: 14px; /* Optionally adjust font size if needed */
+		text-transform: uppercase;
+		font-size: 18px;
+		letter-spacing: 1px;
+		font-weight: 300;
+}
+
+.button .border {
+  fill: none;
+  stroke-width: 1;
+  width: 120px; /* Match the width of the .button */
+  height: 40px; /* Match the height of the .button */
+}
+
+.button .bg-line {
+  fill: #4CAF50;
+  stroke: #4CAF50;
+  transition: all .8s ease-in-out;
+}
+
+.button .hl-line {
+  stroke: #fff;
+  stroke-dasharray: 40 480;
+  stroke-dashoffset: 40;
+  transition: all .8s ease-in-out;
+}
+
+.button:hover .bg-line {
+  fill: #5bb35e;
+}
+
+.button:hover .hl-line {
+  stroke-dashoffset: -480;  
+}
+
+/* Estilo para el menú */
+.menu {
+  position: absolute;
+  top: 50%; /* Situamos el menú debajo del botón */
+  left: 85%; /* Ajuste del margen izquierdo */
+  margin-left: 10px; /* Ajuste del margen izquierdo */
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  display: none;
+}
+
+
+.menu.mostrar {
+  display: block;
 }
