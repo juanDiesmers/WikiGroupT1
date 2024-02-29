@@ -47,6 +47,9 @@ apellidos.addEventListener('blur', function() {
     mensajeChar.innerHTML = "";
 });
 
+correo.addEventListener('blur', function() {
+    mensajeChar.innerHTML = "";
+});
   
 
   descripcion.addEventListener('input', function() {
