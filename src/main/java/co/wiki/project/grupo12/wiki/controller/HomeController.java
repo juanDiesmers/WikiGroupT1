@@ -35,6 +35,7 @@ public class HomeController {
     public String RequerimientosR() {
         return "Requerimientos";
     }
+    
     @GetMapping("/DescipcionProyecto")
     public String DescipcionProyecto() {
         return "DescipcionProyecto";
