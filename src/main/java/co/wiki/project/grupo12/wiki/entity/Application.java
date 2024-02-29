@@ -28,6 +28,11 @@ public class Application {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    private String url;
+    private String code;
+    private String internalCode;
+    // private Status status;
+
     private String apellidos;
     private int edad;
     private String correo;
