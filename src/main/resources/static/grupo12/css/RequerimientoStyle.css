@@ -94,3 +94,14 @@ body {
 .titRequerimientos{
     color: #07E6F0
 }
+
+#head{
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#first{
+  color: white;
+}

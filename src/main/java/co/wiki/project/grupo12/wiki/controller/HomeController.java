@@ -40,5 +40,4 @@ public class HomeController {
     public String DescripcionProyecto() {
         return "DescripcionProyecto";
     }
-    
 }
